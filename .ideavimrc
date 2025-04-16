@@ -1,0 +1,81 @@
+set ideajoin
+set idearefactormode=keep
+set surround
+set easymotion
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapActivateNode='h'
+
+set clipboard+=unnamedplus
+set number relativenumber
+set scrolloff=5
+set incsearch
+
+let mapleader = " "
+
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+
+nmap <Esc> :nohlsearch<CR>
+
+map Q gq
+
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+nmap n nzzzv
+nmap N Nzzzv
+
+nmap H Hzz
+nmap M Mzz
+nmap L Lzz
+
+nmap ss :split<CR>
+nmap sv :vsplit<CR>
+
+nmap sh <C-w>h
+nmap sj <C-w>j
+nmap sk <C-w>k
+nmap sl <C-w>l
+
+nmap <C-s> :w!<CR>
+vmap <C-s> :w!<CR>
+imap <C-s> <Esc>:w!<CR>i
+
+nmap <C-q> :q!<CR>
+vmap <C-q> :q!<CR>
+imap <C-q> <Esc>:q!<CR>
+
+nmap ,r <Action>(IdeaVim.ReloadVimRc.reload)
+nmap ,, <Action>(ShowSettings)
+
+nmap \r <Action>(RunClass)
+nmap \d <Action>(DebugClass)
+nmap \\ <Action>(Rerun)
+nmap \w <Action>(EditorToggleUseSoftWraps)
+nmap \t <Action>(GotoTest)
+
+nmap <leader>sf <Action>(GotoFile)
+nmap <leader>ds <Action>(FileStructurePopup)
+nmap <leader>sg <Action>(FindInPath)
+nmap <leader>/ <Action>(Find)
+nmap <leader>? <Action>(Replace)
+nmap <leader>ws <Action>(GotoSymbol)
+nmap <C-p> <Action>(GotoClass)
+nmap <leader><leader> <Action>(RecentFiles)
+nmap <leader>ww <Action>(HideAllWindows)
+
+nmap <C-y> <Action>(EditorChooseLookupItem)
+vmap <C-y> <Action>(EditorChooseLookupItem)
+imap <C-y> <Action>(EditorChooseLookupItem)
+
+nmap <M-k> <Action>(MethodUp)
+imap <M-k> <Action>(MethodUp)
+nmap <M-j> <Action>(MethodDown)
+imap <M-j> <Action>(MethodDown)
+
+nmap <M-q> <Action>(ParameterInfo)
+vmap <M-q> <Action>(ParameterInfo)
+imap <M-q> <Action>(ParameterInfo)
+
+nmap <leader>f <Action>(ReformatCode)
+nmap <leader>o <Action>(OptimizeImports)
